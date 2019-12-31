@@ -28,12 +28,12 @@ public class BeanConfig {
 						.id("servicio-cashAdvance"))
 				
 				.route(r -> r.path("/api/enterprise/**")
-						.uri("lb://SERVICE-ENTERPRISE/")
+						.uri("lb://service-client-enterprise/")
 						.id("servicio-client-enterprise"))
 				
 				.route(r -> r.path("/api/personal/**")
-						.uri("lb://SERVICE-PERSONAL/")
-						.id("servicio-client-personal"))
+						.uri("lb://service-client-personal/")
+						.id("service-client-personal"))
 				
 				.route(r -> r.path("/api/creditCard/**")
 						.uri("lb://SERVICE-CREDICARD/")
@@ -47,9 +47,13 @@ public class BeanConfig {
 						.uri("lb://SERVICE-PERSONALCREDIT/")
 						.id("servicio-personalCredit"))
 				
-				.route(r -> r.path("/api/manageOperation/**")
+				.route(r -> r.path("/api/operationAccount/**")
 						.uri("lb://SERVICE-MANAGEOPERATION/")
 						.id("servicio-manageOperation"))
+				
+				.route(r -> r.path("/api/operationCard/**")
+						.uri("lb://SERVICE-OPERATIONCREDITCARD/")
+						.id("servicio-operationCard"))
 				.build();
 	}
 }
