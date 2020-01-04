@@ -20,8 +20,8 @@ public class BeanConfig {
 						.id("servicio-fixedTermAccount"))
 				
 				.route(r -> r.path("/api/savingsAccount/**")
-						.uri("lb://SERVICE-ACCOUNT-SAVINGS/")
-						.id("servicio-savingsAccount"))
+						.uri("lb://service-account-savings/")
+						.id("service-account-savings"))
 				
 				.route(r -> r.path("/api/cashAdvance/**")
 						.uri("lb://SERVICE-CASHADVANCE/")
@@ -29,7 +29,7 @@ public class BeanConfig {
 				
 				.route(r -> r.path("/api/enterprise/**")
 						.uri("lb://service-client-enterprise/")
-						.id("servicio-client-enterprise"))
+						.id("service-client-enterprise"))
 				
 				.route(r -> r.path("/api/personal/**")
 						.uri("lb://service-client-personal/")
